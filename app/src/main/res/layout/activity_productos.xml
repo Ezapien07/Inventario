@@ -4,24 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Clientes_activity">
-
+    tools:context=".Productos_activity">
 
     <TextView
-        android:id="@+id/txtNombre"
+        android:id="@+id/txtNombreP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Modulo Clientes"
+        android:text="Modulo Productos"
         android:textAlignment="center"
-
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtNo"
+        android:id="@+id/edtNoP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -29,14 +27,14 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewNo"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+        app:layout_constraintStart_toEndOf="@+id/textViewNoP"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreP" />
 
     <TextView
-        android:id="@+id/textViewNo"
+        android:id="@+id/textViewNoP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
+        android:layout_marginStart="179dp"
         android:layout_marginTop="136dp"
         android:text="No.:"
         android:textAlignment="textEnd"
@@ -45,19 +43,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtNombreCliente"
+        android:id="@+id/txtNombreProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="88dp"
         android:layout_marginTop="12dp"
         android:text="Nombre: "
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNo" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewNoP" />
 
     <EditText
-        android:id="@+id/edtNombreCliente"
+        android:id="@+id/edtNombreProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -65,23 +63,23 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtNombreCliente"
-        app:layout_constraintTop_toBottomOf="@+id/edtNo" />
+        app:layout_constraintStart_toEndOf="@+id/txtNombreProducto"
+        app:layout_constraintTop_toBottomOf="@+id/edtNoP" />
 
     <TextView
-        android:id="@+id/txtCalle"
+        android:id="@+id/txtLinea"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
+        android:layout_marginStart="136dp"
         android:layout_marginTop="16dp"
-        android:text="Calle: "
+        android:text="Linea: "
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreCliente" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreProducto" />
 
     <EditText
-        android:id="@+id/edtCalleCliente"
+        android:id="@+id/edtLinea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -89,23 +87,23 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtCalle"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombreCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtLinea"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreProducto" />
 
     <TextView
-        android:id="@+id/txtColonia"
+        android:id="@+id/txtExistencias"
         android:layout_width="0dp"
         android:layout_height="54dp"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="12dp"
-        android:text="Colonia : "
+        android:text="Existencias: "
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCalle" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLinea" />
 
     <EditText
-        android:id="@+id/edtColoniaCliente"
+        android:id="@+id/edtExistencias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -113,23 +111,23 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtColonia"
-        app:layout_constraintTop_toBottomOf="@+id/edtCalleCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtExistencias"
+        app:layout_constraintTop_toBottomOf="@+id/edtLinea" />
 
     <TextView
-        android:id="@+id/txtCiudad"
+        android:id="@+id/txtCosto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
+        android:layout_marginStart="126dp"
         android:layout_marginTop="16dp"
-        android:text="Ciudad : "
+        android:text="Costo: "
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtColonia" />
+        app:layout_constraintTop_toBottomOf="@+id/txtExistencias" />
 
     <EditText
-        android:id="@+id/edtCiudadCliente"
+        android:id="@+id/edtCosto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -137,23 +135,23 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtCiudad"
-        app:layout_constraintTop_toBottomOf="@+id/edtColoniaCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtCosto"
+        app:layout_constraintTop_toBottomOf="@+id/edtExistencias" />
 
     <TextView
-        android:id="@+id/txtRFC"
+        android:id="@+id/txtPromedio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="12dp"
-        android:text="RFC: "
+        android:text="Promedio: "
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCiudad" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCosto" />
 
     <EditText
-        android:id="@+id/edtRFCCliente"
+        android:id="@+id/edtPromedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -161,47 +159,47 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtRFC"
-        app:layout_constraintTop_toBottomOf="@+id/edtCiudadCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtPromedio"
+        app:layout_constraintTop_toBottomOf="@+id/edtCosto" />
 
     <TextView
-        android:id="@+id/txtTelefono"
+        android:id="@+id/txtVenta1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
+        android:layout_marginStart="107dp"
         android:layout_marginTop="12dp"
-        android:text="Telefono :"
+        android:text="Venta 1:"
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRFC" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPromedio" />
+
+    <EditText
+        android:id="@+id/edtVenta1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/txtVenta1"
+        app:layout_constraintTop_toBottomOf="@+id/edtPromedio" />
 
     <TextView
-        android:id="@+id/txtTelefono2"
+        android:id="@+id/txtVenta2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="16dp"
-        android:text="Email : "
+        android:text="Venta 2: "
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTelefono" />
-
-    <TextView
-        android:id="@+id/txtTelefono3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="12dp"
-        android:text="Saldo : "
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTelefono2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtVenta1" />
 
     <EditText
-        android:id="@+id/edtTelefono"
+        android:id="@+id/edtVenta2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -209,32 +207,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtTelefono"
-        app:layout_constraintTop_toBottomOf="@+id/edtRFCCliente" />
-
-    <EditText
-        android:id="@+id/edtEmailClientes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtTelefono2"
-        app:layout_constraintTop_toBottomOf="@+id/edtTelefono" />
-
-    <EditText
-        android:id="@+id/edtSaldoClientes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtTelefono3"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailClientes" />
+        app:layout_constraintStart_toEndOf="@+id/txtVenta2"
+        app:layout_constraintTop_toBottomOf="@+id/edtVenta1" />
 
     <Button
         android:id="@+id/btnAgregar"
@@ -247,7 +221,7 @@
         android:textSize="38sp"
         app:backgroundTint="@android:color/holo_green_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreP" />
 
     <Button
         android:id="@+id/btnModificar"
