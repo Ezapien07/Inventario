@@ -61,7 +61,7 @@
             app:backgroundTint="@android:color/holo_green_dark" />
 
         <Button
-            android:id="@+id/bntProductos"
+            android:id="@+id/btnProductos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Productos"
