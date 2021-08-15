@@ -6,4 +6,292 @@
     android:layout_height="match_parent"
     tools:context=".Proveedores_activity">
 
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proveedores"
+        android:textAlignment="center"
+        android:textSize="48sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNoProveedores"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewNo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:text="No. :"
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNombreProveedores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Nombre: "
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNo" />
+
+    <EditText
+        android:id="@+id/edtNombreProveedores"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/txtNombreProveedores"
+        app:layout_constraintTop_toBottomOf="@+id/edtNoProveedores" />
+
+    <TextView
+        android:id="@+id/txtCalleProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Calle: "
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreProveedores" />
+
+    <EditText
+        android:id="@+id/edtCalleProveedor"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/txtCalleProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreProveedores" />
+
+    <TextView
+        android:id="@+id/txtColoniaProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Colonia : "
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCalleProveedor" />
+
+    <EditText
+        android:id="@+id/edtColoniaProveedores"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/txtColoniaProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtCalleProveedor" />
+
+    <TextView
+        android:id="@+id/txtCiudadProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Ciudad : "
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtColoniaProveedor" />
+
+
+    <TextView
+        android:id="@+id/txtRFCProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="RFC :"
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCiudadProveedor" />
+
+    <EditText
+        android:id="@+id/edtRFCProveedor"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/txtRFCProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtCiudadProveedor" />
+
+    <EditText
+        android:id="@+id/edtCiudadProveedor"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/txtCiudadProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtColoniaProveedores" />
+
+    <EditText
+        android:id="@+id/edtEmailProveedor"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/txtEmailProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtTelefonoProveedor" />
+
+    <EditText
+        android:id="@+id/edtTelefonoProveedor"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTelefonoProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtRFCProveedor" />
+
+    <TextView
+        android:id="@+id/txtEmailProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Email : "
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefonoProveedor" />
+
+    <EditText
+        android:id="@+id/edtSaldoProveedor"
+        android:layout_width="240dp"
+        android:layout_height="74dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultaProveedor" />
+
+    <TextView
+        android:id="@+id/txtSaldoProveedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo :"
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/edtSaldoProveedor"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toEndOf="@+id/edtTelefonoProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultaProveedor" />
+
+    <TextView
+        android:id="@+id/txtTelefonoProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Telefono :"
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRFCProveedor" />
+
+    <Button
+        android:id="@+id/btnAgregarProveedor"
+        android:layout_width="286dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="44dp"
+        android:text="Agregar"
+        android:textSize="38sp"
+        app:backgroundTint="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnModificarProveedor"
+        android:layout_width="289dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:text="Modificar"
+        android:textSize="38sp"
+        app:backgroundTint="@android:color/holo_blue_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarProveedor" />
+
+    <Button
+        android:id="@+id/btnBuscarProveedor"
+        android:layout_width="282dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:text="Buscar"
+        android:textSize="38sp"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarProveedor" />
+
+    <Button
+        android:id="@+id/btnBajaProveedor"
+        android:layout_width="289dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:text="Baja"
+        android:textSize="38sp"
+        app:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscarProveedor" />
+
+    <Button
+        android:id="@+id/btnConsultaProveedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:text="Ver Listado"
+        android:textSize="38sp"
+        app:backgroundTint="@android:color/holo_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBajaProveedor" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
