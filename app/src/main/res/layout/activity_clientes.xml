@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtNo"
+        android:id="@+id/edtNoVendedores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtNombreCliente"
+        android:id="@+id/txtNombreVendedores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewNo" />
 
     <EditText
-        android:id="@+id/edtNombreCliente"
+        android:id="@+id/edtNombreVendedores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -65,11 +65,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtNombreCliente"
-        app:layout_constraintTop_toBottomOf="@+id/edtNo" />
+        app:layout_constraintStart_toEndOf="@+id/txtNombreVendedores"
+        app:layout_constraintTop_toBottomOf="@+id/edtNoVendedores" />
 
     <TextView
-        android:id="@+id/txtCalle"
+        android:id="@+id/txtCalleVendedor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
@@ -78,10 +78,10 @@
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreCliente" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreVendedores" />
 
     <EditText
-        android:id="@+id/edtCalleCliente"
+        android:id="@+id/edtCalleVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -89,11 +89,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtCalle"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombreCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtCalleVendedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreVendedores" />
 
     <TextView
-        android:id="@+id/txtColonia"
+        android:id="@+id/txtColoniaVendedor"
         android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="55dp"
@@ -102,10 +102,10 @@
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCalle" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCalleVendedor" />
 
     <EditText
-        android:id="@+id/edtColoniaCliente"
+        android:id="@+id/edtColoniaVendedores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -113,11 +113,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtColonia"
-        app:layout_constraintTop_toBottomOf="@+id/edtCalleCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtColoniaVendedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtCalleVendedor" />
 
     <TextView
-        android:id="@+id/txtCiudad"
+        android:id="@+id/txtTelefonoVendedor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
@@ -126,10 +126,10 @@
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtColonia" />
+        app:layout_constraintTop_toBottomOf="@+id/txtColoniaVendedor" />
 
     <EditText
-        android:id="@+id/edtCiudadCliente"
+        android:id="@+id/edtTelefonoVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -137,11 +137,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtCiudad"
-        app:layout_constraintTop_toBottomOf="@+id/edtColoniaCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtTelefonoVendedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtColoniaVendedores" />
 
     <TextView
-        android:id="@+id/txtRFC"
+        android:id="@+id/txtEmailVendedor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="127dp"
@@ -150,10 +150,10 @@
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCiudad" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefonoVendedor" />
 
     <EditText
-        android:id="@+id/edtRFCCliente"
+        android:id="@+id/edtEmailVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -161,11 +161,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtRFC"
-        app:layout_constraintTop_toBottomOf="@+id/edtCiudadCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtEmailVendedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtTelefonoVendedor" />
 
     <TextView
-        android:id="@+id/txtTelefono"
+        android:id="@+id/txtSaldoProveedor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
@@ -174,7 +174,7 @@
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRFC" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailVendedor" />
 
     <TextView
         android:id="@+id/txtTelefono2"
@@ -186,7 +186,7 @@
         android:textAlignment="textEnd"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTelefono" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSaldoProveedor" />
 
     <TextView
         android:id="@+id/txtTelefono3"
@@ -201,7 +201,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTelefono2" />
 
     <EditText
-        android:id="@+id/edtTelefono"
+        android:id="@+id/edtSaldoProveedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -209,8 +209,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtTelefono"
-        app:layout_constraintTop_toBottomOf="@+id/edtRFCCliente" />
+        app:layout_constraintStart_toEndOf="@+id/txtSaldoProveedor"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailVendedor" />
 
     <EditText
         android:id="@+id/edtEmailClientes"
@@ -222,7 +222,7 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtTelefono2"
-        app:layout_constraintTop_toBottomOf="@+id/edtTelefono" />
+        app:layout_constraintTop_toBottomOf="@+id/edtSaldoProveedor" />
 
     <EditText
         android:id="@+id/edtSaldoClientes"
@@ -300,5 +300,6 @@
         app:backgroundTint="@android:color/holo_purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBaja" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
