@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     public void abrirProductos() {
         Intent iproductos = new Intent(this, Productos_activity.class);
         startActivity(iproductos);
+    }
 
     public void abrirProveedor(){
         Intent iproveedores=new Intent(this, Proveedores_activity.class);
