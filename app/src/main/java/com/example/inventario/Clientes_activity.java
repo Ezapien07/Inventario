@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Clientes_activity extends AppCompatActivity {
+public class Clientes_activity extends AppCompatActivity implements View.OnClickListener{
 
     private EditText edtClave, edtNombre, edtCalle, edtColonia, edtCiudad, edtRfc, edtTelefono, edtEmail, edtSaldo;
     Button btnAdd,
@@ -30,24 +30,24 @@ public class Clientes_activity extends AppCompatActivity {
         edtColonia = findViewById(R.id.edtColoniaCliente);
         edtCiudad = findViewById(R.id.edtCiudadCliente);
         edtRfc = findViewById(R.id.edtRFCCliente);
-        edtTelefono = findViewById(R.id.edtTelefono);
-        edtEmail = findViewById(R.id.edtEmailClientes);
-        edtSaldo = findViewById(R.id.edtSaldoClientes);
+        edtTelefono = findViewById(R.id.edtTelefonoCliente);
+        edtEmail = findViewById(R.id.edtEmailCliente);
+        edtSaldo = findViewById(R.id.edtSaldoCliente);
 
         btnAdd = findViewById(R.id.btnAgregar);
-        btnAdd.setOnClickListener((View.OnClickListener) this);
+        btnAdd.setOnClickListener(this);
 
         btnView = findViewById(R.id.btnBuscar);
-        btnView.setOnClickListener((View.OnClickListener) this);
+        btnView.setOnClickListener(this);
 
         btnModify = findViewById(R.id.btnModificar);
-        btnModify.setOnClickListener((View.OnClickListener) this);
+        btnModify.setOnClickListener(this);
 
         btnDelete = findViewById(R.id.btnBaja);
-        btnDelete.setOnClickListener((View.OnClickListener) this);
+        btnDelete.setOnClickListener(this);
 
         btnViewAll = findViewById(R.id.btnConsulta);
-        btnViewAll.setOnClickListener((View.OnClickListener) this);
+        btnViewAll.setOnClickListener(this);
     }
 
     public void onClick(View view) {
@@ -154,7 +154,7 @@ public class Clientes_activity extends AppCompatActivity {
     }
 
     public void showMessage(String title, String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage(message);

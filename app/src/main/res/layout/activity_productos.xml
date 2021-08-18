@@ -6,273 +6,288 @@
     android:layout_height="match_parent"
     tools:context=".Productos_activity">
 
-    <TextView
-        android:id="@+id/txtNombreP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Modulo Productos"
-        android:textAlignment="center"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edtNoP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewNoP"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreP" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewNoP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="179dp"
-        android:layout_marginTop="136dp"
-        android:text="No.:"
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtNombreP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Modulo Productos"
+                android:textAlignment="center"
+                android:textSize="48sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtNombreProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="12dp"
-        android:text="Nombre: "
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNoP" />
+            <EditText
+                android:id="@+id/edtNoP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewNoP"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombreP" />
 
-    <EditText
-        android:id="@+id/edtNombreProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtNombreProducto"
-        app:layout_constraintTop_toBottomOf="@+id/edtNoP" />
+            <TextView
+                android:id="@+id/textViewNoP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="179dp"
+                android:layout_marginTop="136dp"
+                android:text="No.:"
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtLinea"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="16dp"
-        android:text="Linea: "
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreProducto" />
+            <TextView
+                android:id="@+id/txtNombreProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="12dp"
+                android:text="Nombre: "
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNoP" />
 
-    <EditText
-        android:id="@+id/edtLinea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtLinea"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombreProducto" />
+            <EditText
+                android:id="@+id/edtNombreProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/txtNombreProducto"
+                app:layout_constraintTop_toBottomOf="@+id/edtNoP" />
 
-    <TextView
-        android:id="@+id/txtExistencias"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="12dp"
-        android:text="Existencias: "
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLinea" />
+            <TextView
+                android:id="@+id/txtLinea"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="16dp"
+                android:text="Linea: "
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombreProducto" />
 
-    <EditText
-        android:id="@+id/edtExistencias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtExistencias"
-        app:layout_constraintTop_toBottomOf="@+id/edtLinea" />
+            <EditText
+                android:id="@+id/edtLinea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/txtLinea"
+                app:layout_constraintTop_toBottomOf="@+id/edtNombreProducto" />
 
-    <TextView
-        android:id="@+id/txtCosto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="16dp"
-        android:text="Costo: "
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtExistencias" />
+            <TextView
+                android:id="@+id/txtExistencias"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="12dp"
+                android:text="Existencias: "
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLinea" />
 
-    <EditText
-        android:id="@+id/edtCosto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtCosto"
-        app:layout_constraintTop_toBottomOf="@+id/edtExistencias" />
+            <EditText
+                android:id="@+id/edtExistencias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/txtExistencias"
+                app:layout_constraintTop_toBottomOf="@+id/edtLinea" />
 
-    <TextView
-        android:id="@+id/txtPromedio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="12dp"
-        android:text="Promedio: "
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCosto" />
+            <TextView
+                android:id="@+id/txtCosto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="16dp"
+                android:text="Costo: "
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtExistencias" />
 
-    <EditText
-        android:id="@+id/edtPromedio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtPromedio"
-        app:layout_constraintTop_toBottomOf="@+id/edtCosto" />
+            <EditText
+                android:id="@+id/edtCosto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/txtCosto"
+                app:layout_constraintTop_toBottomOf="@+id/edtExistencias" />
 
-    <TextView
-        android:id="@+id/txtVenta1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="12dp"
-        android:text="Venta 1:"
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPromedio" />
+            <TextView
+                android:id="@+id/txtPromedio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="12dp"
+                android:text="Promedio: "
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCosto" />
 
-    <EditText
-        android:id="@+id/edtVenta1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtVenta1"
-        app:layout_constraintTop_toBottomOf="@+id/edtPromedio" />
+            <EditText
+                android:id="@+id/edtPromedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/txtPromedio"
+                app:layout_constraintTop_toBottomOf="@+id/edtCosto" />
 
-    <TextView
-        android:id="@+id/txtVenta2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="16dp"
-        android:text="Venta 2: "
-        android:textAlignment="textEnd"
-        android:textSize="40sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtVenta1" />
+            <TextView
+                android:id="@+id/txtVenta1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="107dp"
+                android:layout_marginTop="12dp"
+                android:text="Venta 1:"
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPromedio" />
 
-    <EditText
-        android:id="@+id/edtVenta2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/txtVenta2"
-        app:layout_constraintTop_toBottomOf="@+id/edtVenta1" />
+            <EditText
+                android:id="@+id/edtVenta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:textSize="28sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/txtVenta1"
+                app:layout_constraintTop_toBottomOf="@+id/edtPromedio" />
 
-    <Button
-        android:id="@+id/btnAgregar"
-        android:layout_width="286dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
-        android:onClick="onClick"
-        android:text="Agregar"
-        android:textSize="38sp"
-        app:backgroundTint="@android:color/holo_green_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreP" />
+            <TextView
+                android:id="@+id/txtVenta2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="96dp"
+                android:layout_marginTop="16dp"
+                android:text="Venta 2: "
+                android:textAlignment="textEnd"
+                android:textSize="40sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtVenta1" />
 
-    <Button
-        android:id="@+id/btnModificar"
-        android:layout_width="286dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
-        android:onClick="onClick"
-        android:text="Modificar"
-        android:textSize="38sp"
-        app:backgroundTint="@android:color/holo_blue_bright"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAgregar" />
+            <EditText
+                android:id="@+id/edtVenta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:textSize="28sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/txtVenta2"
+                app:layout_constraintTop_toBottomOf="@+id/edtVenta1" />
 
-    <Button
-        android:id="@+id/btnBuscar"
-        android:layout_width="286dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
-        android:onClick="onClick"
-        android:text="Buscar"
-        android:textSize="38sp"
-        app:backgroundTint="@android:color/darker_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnModificar" />
+            <Button
+                android:id="@+id/btnAgregarP"
+                android:layout_width="286dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="50dp"
+                android:onClick="onClick"
+                android:text="Agregar"
+                android:textSize="38sp"
+                app:backgroundTint="@android:color/holo_green_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombreP" />
 
-    <Button
-        android:id="@+id/btnBaja"
-        android:layout_width="286dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
-        android:onClick="onClick"
-        android:text="Baja"
-        android:textSize="38sp"
-        app:backgroundTint="@android:color/holo_red_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBuscar" />
+            <Button
+                android:id="@+id/btnModificarP"
+                android:layout_width="286dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="50dp"
+                android:onClick="onClick"
+                android:text="Modificar"
+                android:textSize="38sp"
+                app:backgroundTint="@android:color/holo_blue_bright"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnAgregarP" />
 
-    <Button
-        android:id="@+id/btnConsulta"
-        android:layout_width="286dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
-        android:onClick="onClick"
-        android:text="Ver Listado"
-        android:textSize="38sp"
-        app:backgroundTint="@android:color/holo_purple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBaja" />
+            <Button
+                android:id="@+id/btnBuscarP"
+                android:layout_width="286dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="50dp"
+                android:onClick="onClick"
+                android:text="Buscar"
+                android:textSize="38sp"
+                app:backgroundTint="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnModificarP" />
 
+            <Button
+                android:id="@+id/btnBajaP"
+                android:layout_width="286dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="50dp"
+                android:onClick="onClick"
+                android:text="Baja"
+                android:textSize="38sp"
+                app:backgroundTint="@android:color/holo_red_dark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnBuscarP" />
+
+            <Button
+                android:id="@+id/btnConsultaP"
+                android:layout_width="286dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="50dp"
+                android:onClick="onClick"
+                android:text="Ver Listado"
+                android:textSize="38sp"
+                app:backgroundTint="@android:color/holo_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnBajaP" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

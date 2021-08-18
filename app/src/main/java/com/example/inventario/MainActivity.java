@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnClientes = (Button) findViewById(R.id.btnClientes);
         Button btnProductos = (Button) findViewById(R.id.btnProductos);
+        Button btnProveedor = (Button) findViewById(R.id.btnProveedores);
+        Button btnVendedores = (Button) findViewById(R.id.btnVendedores);
 
         btnClientes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,21 +29,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         btnProductos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 abrirProductos();
             }
         });
-        Button btnProveedor=(Button)findViewById(R.id.btnProveedores);
+
         btnProveedor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 abrirProveedor();
             }
         });
-        Button btnVendedores=(Button)findViewById(R.id.btnVendedores);
+
         btnVendedores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,17 +57,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(iclientes);
     }
 
-
     public void abrirProductos() {
         Intent iproductos = new Intent(this, Productos_activity.class);
         startActivity(iproductos);
+    }
 
-    public void abrirProveedor(){
-        Intent iproveedores=new Intent(this, Proveedores_activity.class);
+    public void abrirProveedor() {
+        Intent iproveedores = new Intent(this, Proveedores_activity.class);
         startActivity(iproveedores);
     }
-    public void abrirVendedores(){
-        Intent ivendedores=new Intent(this,Vendedores_activity.class);
+
+    public void abrirVendedores() {
+        Intent ivendedores = new Intent(this, Vendedores_activity.class);
         startActivity(ivendedores);
 
     }

@@ -4,13 +4,15 @@ import android.app.AlertDialog;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Productos_activity extends AppCompatActivity {
+public class Productos_activity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText edtClave, edtNombre, edtLinea, edtExistencias, edtCosto, edtPromedio, edtVenta1, edtVenta2;
     Button btnAdd,
@@ -33,20 +35,20 @@ public class Productos_activity extends AppCompatActivity {
         edtVenta1 = findViewById(R.id.edtVenta1);
         edtVenta2 = findViewById(R.id.edtVenta2);
 
-        btnAdd = findViewById(R.id.btnAgregar);
-        btnAdd.setOnClickListener((View.OnClickListener) this);
+        btnAdd = findViewById(R.id.btnAgregarP);
+        btnAdd.setOnClickListener(this);
 
-        btnView = findViewById(R.id.btnBuscar);
-        btnView.setOnClickListener((View.OnClickListener) this);
+        btnView = findViewById(R.id.btnBuscarP);
+        btnView.setOnClickListener(this);
 
-        btnModify = findViewById(R.id.btnModificar);
-        btnModify.setOnClickListener((View.OnClickListener) this);
+        btnModify = findViewById(R.id.btnModificarP);
+        btnModify.setOnClickListener(this);
 
-        btnDelete = findViewById(R.id.btnBaja);
-        btnDelete.setOnClickListener((View.OnClickListener) this);
+        btnDelete = findViewById(R.id.btnBajaP);
+        btnDelete.setOnClickListener(this);
 
-        btnViewAll = findViewById(R.id.btnConsulta);
-        btnViewAll.setOnClickListener((View.OnClickListener) this);
+        btnViewAll = findViewById(R.id.btnConsultaP);
+        btnViewAll.setOnClickListener(this);
     }
 
     public void onClick(View view) {
@@ -56,25 +58,31 @@ public class Productos_activity extends AppCompatActivity {
                     edtLinea.getText().toString().trim().length() == 0 ||
                     edtExistencias.getText().toString().trim().length() == 0 ||
                     edtCosto.getText().toString().trim().length() == 0 ||
-                    edtPromedio.getText().toString().trim().length() == 0 ||
-                    edtVenta1.getText().toString().trim().length() == 0 ||
-                    edtVenta2.getText().toString().trim().length() == 0) {
+                    edtPromedio.getText().toString().trim().length() == 0) {
                 showMessage("Error!", "Porfavor introduce todos los valores");
                 return;
             }
 
+            String venta;
+            venta = edtCosto.getText().toString().trim();
+            double venta1 = 0;
+            venta1 = Double.parseDouble(venta) * 1.4;
+            double venta2 = 0;
+            venta2 = Double.parseDouble(venta) * 1.28;
+
             SqlConexion sql = new SqlConexion(getApplicationContext());
             SQLiteDatabase db = sql.getWritableDatabase();
             db.execSQL("INSERT INTO producto VALUES('" + edtClave.getText().toString().trim() + "','"
-                    + edtNombre.getText().toString().trim() + "','"
-                    + edtLinea.getText().toString().trim() + "','"
-                    + edtExistencias.getText().toString().trim() + "','"
-                    + edtCosto.getText().toString().trim() + "','"
-                    + edtPromedio.getText().toString().trim() + "','"
-                    + edtVenta1.getText().toString().trim() + "','"
-                    + edtVenta2.getText().toString().trim() + "');");
+                    + edtNombre.getText() + "','"
+                    + edtLinea.getText() + "','"
+                    + edtExistencias.getText() + "','"
+                    + edtCosto.getText() + "','"
+                    + edtPromedio.getText() + "','"
+                    + venta1 + "','"
+                    + venta2 + "');");
             showMessage("Exito!", "Producto agregado");
             clearText();
+
         }
 
         if (view == btnView) {
@@ -141,14 +149,14 @@ public class Productos_activity extends AppCompatActivity {
                 buffer.append("Costo..: " + c.getString(4) + "\n");
                 buffer.append("Promedio..: " + c.getString(5) + "\n");
                 buffer.append("Venta 1..: " + c.getString(6) + "\n");
-                buffer.append("Venta 2..: " + c.getString(7) + "\n");
+                buffer.append("Venta 2..: " + c.getString(7) + "\n\n");
             }
             showMessage("Producto", buffer.toString());
         }
     }
 
     public void showMessage(String title, String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage(message);
