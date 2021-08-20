@@ -8,7 +8,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -79,7 +81,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="136dp"
-                android:layout_marginTop="16dp"
                 android:text="Linea: "
                 android:textAlignment="textEnd"
                 android:textSize="40sp"
@@ -192,6 +193,7 @@
                 android:ems="10"
                 android:enabled="false"
                 android:inputType="textPersonName"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:visibility="visible"
                 app:layout_constraintStart_toEndOf="@+id/txtVenta1"
@@ -219,6 +221,7 @@
                 android:ems="10"
                 android:enabled="false"
                 android:inputType="textPersonName"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:visibility="visible"
                 app:layout_constraintStart_toEndOf="@+id/txtVenta2"
@@ -288,6 +291,7 @@
                 app:backgroundTint="@android:color/holo_purple"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnBajaP" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 public class SqlConexion extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NOMBRE = "Inventario.db";
+    private static final String DATABASE_NOMBRE = "Inventario";
 
     public SqlConexion(@Nullable Context context) {
         super(context, DATABASE_NOMBRE, null, DATABASE_VERSION);
@@ -38,6 +38,7 @@ public class SqlConexion extends SQLiteOpenHelper {
                 "promedio TEXT NOT NULL, " +
                 "pventa1 TEXT NOT NULL, " +
                 "pventa2 TEXT NOT NULL)");
+
     }
 
     @Override

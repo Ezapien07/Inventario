@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.Editable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -115,10 +113,7 @@ public class Productos_activity extends AppCompatActivity implements View.OnClic
                     "nombre_p = '" + edtNombre.getText() + " '," +
                     "linea = '" + edtLinea.getText() + " '," +
                     "existencias = '" + edtExistencias.getText() + " '," +
-                    "costo = '" + edtCosto.getText() + " '," +
-                    "promedio = '" + edtPromedio.getText() + " '," +
-                    "pventa1 = '" + edtVenta1.getText() + " '," +
-                    "pventa2 = '" + edtVenta2.getText() + " '" +
+                    "costo = '" + edtCosto.getText() + " '" +
                     " WHERE clave_p = " + edtClave.getText() + ';');
             showMessage("Exito!", "Producto modificado");
             clearText();
