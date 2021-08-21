@@ -24,13 +24,13 @@ public class Vendedores_activity extends AppCompatActivity {
         setContentView(R.layout.activity_vendedores);
 
 
-        edtNoVendedor=(EditText)findViewById(R.id.edtNoVendedores);
-        edtNombreVendedor=(EditText)findViewById(R.id.edtNombreVendedores);
-        edtCalleVendedor=(EditText)findViewById(R.id.edtCalleVendedor);
-        edtColoniaVendedor=(EditText)findViewById(R.id.edtColoniaVendedores);
-        edtTelefonoVendedor=(EditText)findViewById(R.id.edtTelefonoVendedor);
-        edtEmailVendedor=(EditText)findViewById(R.id.edtEmailVendedor);
-        edtComision=(EditText)findViewById(R.id.edtSaldoProveedor);
+        edtNoVendedor=(EditText)findViewById(R.id.edtClaveCliente);
+        edtNombreVendedor=(EditText)findViewById(R.id.edtNombreCliente);
+        edtCalleVendedor=(EditText)findViewById(R.id.edtCalleCliente);
+        edtColoniaVendedor=(EditText)findViewById(R.id.edtColoniaCliente);
+        edtTelefonoVendedor=(EditText)findViewById(R.id.edtCiudadCliente);
+        edtEmailVendedor=(EditText)findViewById(R.id.edtRFCCliente);
+        edtComision=(EditText)findViewById(R.id.edtTelefonoCliente);
 
         btnAgregarVendedor=(Button)findViewById(R.id.btnAgregarVendedor);
         btnModificarVendedor=(Button)findViewById(R.id.btnModificarVendedor);
@@ -59,7 +59,7 @@ public class Vendedores_activity extends AppCompatActivity {
                     + edtTelefonoVendedor.getText() + "','"
                     + edtEmailVendedor.getText() + "','"
                     + edtComision.getText() + "');");
-            showMessage("Exito!", "Proveedor agregado");
+            showMessage("Exito!", "Vendedor agregado");
             clearText();
         }else{
             showMessage("Error!", "Porfavor introduce todos los valores");
@@ -88,7 +88,7 @@ public class Vendedores_activity extends AppCompatActivity {
                 } catch (Exception e) {
                     System.out.println(e.toString());
                 }
-                showMessage("Exito!", "Proveedor modificado");
+                showMessage("Exito!", "Vendedor modificado");
                 clearText();
             } else {
                 showMessage("Error!", "Porfavor introduce todos los valores");
@@ -106,7 +106,7 @@ public class Vendedores_activity extends AppCompatActivity {
             return;
         }
         db.execSQL("DELETE FROM vendedores where noVendedor='"+edtNoVendedor.getText()+"'");
-        showMessage("Exito!", "Proveedor eliminado");
+        showMessage("Exito!", "Vendedor eliminado");
         clearText();
     }
 

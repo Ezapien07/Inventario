@@ -3,6 +3,7 @@ package com.example.inventario;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -18,139 +19,160 @@ public class Clientes_activity extends AppCompatActivity {
             btnModify,
             btnView,
             btnViewAll;
+    SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clientes);
 
-        edtClave = findViewById(R.id.edtNo);
-        edtNombre = findViewById(R.id.edtNombreCliente);
-        edtCalle = findViewById(R.id.edtCalleCliente);
-        edtColonia = findViewById(R.id.edtColoniaCliente);
-        edtCiudad = findViewById(R.id.edtCiudadCliente);
-        edtRfc = findViewById(R.id.edtRFCCliente);
-        edtTelefono = findViewById(R.id.edtTelefono);
-        edtEmail = findViewById(R.id.edtEmailClientes);
-        edtSaldo = findViewById(R.id.edtSaldoClientes);
+        edtClave =(EditText)findViewById(R.id.edtClaveCliente);
+        edtNombre =(EditText)findViewById(R.id.edtNombreCliente);
+        edtCalle =(EditText)findViewById(R.id.edtCalleCliente);
+        edtColonia =(EditText)findViewById(R.id.edtColoniaCliente);
+        edtCiudad =(EditText)findViewById(R.id.edtColoniaCliente);
+        edtRfc =(EditText)findViewById(R.id.edtRFCCliente);
+        edtTelefono =(EditText)findViewById(R.id.edtTelefonoCliente);
+        edtEmail =(EditText)findViewById(R.id.edtEmailCliente);
+        edtSaldo =(EditText)findViewById(R.id.edtSaldoCliente);
 
-        btnAdd = findViewById(R.id.btnAgregar);
-        btnAdd.setOnClickListener((View.OnClickListener) this);
+        db=openOrCreateDatabase("Inventario", Context.MODE_PRIVATE, null);
+        //db.execSQL("DROP TABLE IF  EXISTS  clientes ");
+        db.execSQL("CREATE TABLE IF NOT EXISTS  clientes (clave VARCHAR  , nombre VARCHAR  ,calle VARCHAR  , colonia VARCHAR  ,ciudad VARCHAR  , rfc VARCHAR  , telefono VARCHAR ,email VARCHAR  ,saldo VARCHAR  )");
 
-        btnView = findViewById(R.id.btnBuscar);
-        btnView.setOnClickListener((View.OnClickListener) this);
 
-        btnModify = findViewById(R.id.btnModificar);
-        btnModify.setOnClickListener((View.OnClickListener) this);
+        btnAdd =(Button)findViewById(R.id.btnAgregar);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                agregarCliente();
+            }
+        });
 
-        btnDelete = findViewById(R.id.btnBaja);
-        btnDelete.setOnClickListener((View.OnClickListener) this);
+        btnView =(Button)findViewById(R.id.btnBuscar);
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buscarCliente();
+            }
+        });
 
-        btnViewAll = findViewById(R.id.btnConsulta);
-        btnViewAll.setOnClickListener((View.OnClickListener) this);
+        btnModify =(Button)findViewById(R.id.btnModificar);
+        btnModify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                modificarCliente();
+            }
+        });
+
+        btnDelete =(Button)findViewById(R.id.btnBaja);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                borrarCliente();
+            }
+        });
+
+        btnViewAll =(Button)findViewById(R.id.btnConsulta);
+        btnViewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewAllClientes();
+            }
+        });
+    }
+    public void agregarCliente(){
+        if (edtClave.getText().toString().trim().length() == 0 ||
+                edtNombre.getText().toString().trim().length() == 0 ||
+                edtCalle.getText().toString().trim().length() == 0 ||
+                edtColonia.getText().toString().trim().length() == 0 ||
+                edtCiudad.getText().toString().trim().length() == 0 ||
+                edtRfc.getText().toString().trim().length() == 0 ||
+                edtTelefono.getText().toString().trim().length() == 0 ||
+                edtEmail.getText().toString().trim().length() == 0 ||
+                edtSaldo.getText().toString().trim().length() == 0) {
+            showMessage("Error!", "Porfavor introduce todos los valores");
+            return;
+        }
+        db.execSQL("INSERT INTO clientes VALUES('" + edtClave.getText() + "','"
+                + edtNombre.getText() + "','"
+                + edtCalle.getText()+ "','"
+                + edtColonia.getText()+ "','"
+                + edtCiudad.getText() + "','"
+                + edtRfc.getText()+ "','"
+                + edtTelefono.getText()+ "','"
+                + edtEmail.getText() + "','"
+                + edtSaldo.getText() + "');");
+        showMessage("Exito!", "clientes agregado");
+        clearText();
     }
 
-    public void onClick(View view) {
-        if (view == btnAdd) {
-            if (edtClave.getText().toString().trim().length() == 0 ||
-                    edtNombre.getText().toString().trim().length() == 0 ||
-                    edtCalle.getText().toString().trim().length() == 0 ||
-                    edtColonia.getText().toString().trim().length() == 0 ||
-                    edtCiudad.getText().toString().trim().length() == 0 ||
-                    edtRfc.getText().toString().trim().length() == 0 ||
-                    edtTelefono.getText().toString().trim().length() == 0 ||
-                    edtEmail.getText().toString().trim().length() == 0 ||
-                    edtSaldo.getText().toString().trim().length() == 0) {
-                showMessage("Error!", "Porfavor introduce todos los valores");
-                return;
-            }
-
-            SqlConexion sql = new SqlConexion(getApplicationContext());
-            SQLiteDatabase db = sql.getWritableDatabase();
-            db.execSQL("INSERT INTO cliente VALUES('" + edtClave.getText().toString().trim() + "','"
-                    + edtNombre.getText().toString().trim() + "','"
-                    + edtCalle.getText().toString().trim() + "','"
-                    + edtColonia.getText().toString().trim() + "','"
-                    + edtCiudad.getText().toString().trim() + "','"
-                    + edtRfc.getText().toString().trim() + "','"
-                    + edtTelefono.getText().toString().trim() + "','"
-                    + edtEmail.getText().toString().trim() + "','"
-                    + edtSaldo.getText().toString().trim() + "');");
-            showMessage("Exito!", "Cliente agregado");
+    public void buscarCliente(){
+        if (edtClave.getText().toString().trim().length() == 0) {
+            showMessage("Error!", "Introduce Clave");
+            return;
+        }
+        Cursor c = db.rawQuery("SELECT * FROM clientes WHERE clave='" + edtClave.getText() + "'", null);
+        if (c.moveToFirst()) {
+            edtClave.setText(c.getString(0));
+            edtNombre.setText(c.getString(1));
+            edtCalle.setText(c.getString(2));
+            edtColonia.setText(c.getString(3));
+            edtCiudad.setText(c.getString(4));
+            edtRfc.setText(c.getString(5));
+            edtTelefono.setText(c.getString(6));
+            edtEmail.setText(c.getString(7));
+            edtSaldo.setText(c.getString(8));
+        } else {
+            showMessage("Error!", "Clave no valida");
             clearText();
         }
 
-        if (view == btnView) {
-            if (edtClave.getText().toString().trim().length() == 0) {
-                showMessage("Error!", "Introduce Clave");
-                return;
-            }
-            SqlConexion sql = new SqlConexion(getApplicationContext());
-            SQLiteDatabase db = sql.getWritableDatabase();
-            Cursor c = db.rawQuery("SELECT * FROM cliente WHERE clave='" + edtClave.getText() + "'", null);
-            if (c.moveToFirst()) {
-                edtClave.setText(c.getString(0));
-                edtNombre.setText(c.getString(1));
-                edtCalle.setText(c.getString(2));
-                edtColonia.setText(c.getString(3));
-                edtCiudad.setText(c.getString(4));
-                edtRfc.setText(c.getString(5));
-                edtTelefono.setText(c.getString(6));
-                edtEmail.setText(c.getString(7));
-                edtSaldo.setText(c.getString(8));
-            } else {
-                showMessage("Error!", "Clave no valida");
-                clearText();
-            }
-        }
+    }
 
-        if (view == btnModify) {
-            SqlConexion sql = new SqlConexion(getApplicationContext());
-            SQLiteDatabase db = sql.getWritableDatabase();
-            db.execSQL("UPDATE cliente SET " +
-                    "nombre = '" + edtNombre.getText() + " '," +
-                    "calle = '" + edtCalle.getText() + " '," +
-                    "colonia = '" + edtColonia.getText() + " '," +
-                    "ciudad = '" + edtCiudad.getText() + " '," +
-                    "rfc = '" + edtRfc.getText() + " '," +
-                    "telefono = '" + edtTelefono.getText() + " '," +
-                    "email = '" + edtEmail.getText() + " '," +
-                    "saldo = '" + edtSaldo.getText() + " '" +
-                    " WHERE clave = " + edtClave.getText() + ';');
-            showMessage("Exito!", "Cliente modificado");
-            clearText();
-        }
+    public void modificarCliente(){
+        db.execSQL("UPDATE clientes SET " +
+                "nombre = '" + edtNombre.getText() + " '," +
+                "calle = '" + edtCalle.getText() + " '," +
+                "colonia = '" + edtColonia.getText() + " '," +
+                "ciudad = '" + edtCiudad.getText() + " '," +
+                "rfc = '" + edtRfc.getText() + " '," +
+                "telefono = '" + edtTelefono.getText() + " '," +
+                "email = '" + edtEmail.getText() + " '," +
+                "saldo = '" + edtSaldo.getText() + " '" +
+                " WHERE clave = " + edtClave.getText() + ';');
+        showMessage("Exito!", "clientes modificado");
+        clearText();
 
-        if (view == btnDelete) {
-            SqlConexion sql = new SqlConexion(getApplicationContext());
-            SQLiteDatabase db = sql.getWritableDatabase();
-            db.execSQL("DELETE FROM cliente WHERE clave = " + edtClave.getText().toString().trim() + ";");
-            showMessage("Exito!", "Cliente eliminado");
-            clearText();
-        }
+    }
 
-        if (view == btnViewAll) {
-            SqlConexion sql = new SqlConexion(getApplicationContext());
-            SQLiteDatabase db = sql.getWritableDatabase();
-            Cursor c = db.rawQuery("SELECT * FROM cliente", null);
-            if (c.getCount() == 0) {
-                showMessage("Error!", "No se encontraron clientes");
-                return;
-            }
-            StringBuffer buffer = new StringBuffer();
-            while (c.moveToNext()) {
-                buffer.append("Clave...: " + c.getString(0) + "\n");
-                buffer.append("Nombre..: " + c.getString(1) + "\n");
-                buffer.append("Calle..: " + c.getString(2) + "\n");
-                buffer.append("Colonia..: " + c.getString(3) + "\n");
-                buffer.append("Ciudad..: " + c.getString(4) + "\n");
-                buffer.append("RFC..: " + c.getString(5) + "\n");
-                buffer.append("Telefono..: " + c.getString(6) + "\n");
-                buffer.append("Email..: " + c.getString(7) + "\n");
-                buffer.append("Saldo..: " + c.getString(8) + "\n\n");
-            }
-            showMessage("Cliente", buffer.toString());
+    public void borrarCliente(){
+        db.execSQL("DELETE FROM clientes WHERE clave = " + edtClave.getText().toString().trim() + ";");
+        showMessage("Exito!", "clientes eliminado");
+        clearText();
+
+    }
+
+    public void ViewAllClientes(){
+        Cursor c = db.rawQuery("SELECT * FROM clientes", null);
+        if (c.getCount() == 0) {
+            showMessage("Error!", "No se encontraron clientes");
+            return;
         }
+        StringBuffer buffer = new StringBuffer();
+        while (c.moveToNext()) {
+            buffer.append("Clave...: " + c.getString(0) + "\n");
+            buffer.append("Nombre..: " + c.getString(1) + "\n");
+            buffer.append("Calle..: " + c.getString(2) + "\n");
+            buffer.append("Colonia..: " + c.getString(3) + "\n");
+            buffer.append("Ciudad..: " + c.getString(4) + "\n");
+            buffer.append("RFC..: " + c.getString(5) + "\n");
+            buffer.append("Telefono..: " + c.getString(6) + "\n");
+            buffer.append("Email..: " + c.getString(7) + "\n");
+            buffer.append("Saldo..: " + c.getString(8) + "\n\n");
+        }
+        showMessage("Cliente", buffer.toString());
+
     }
 
     public void showMessage(String title, String message) {

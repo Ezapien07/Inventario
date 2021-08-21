@@ -12,6 +12,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
+    Button btnReportes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnCompras=(Button)findViewById(R.id.btnCompras);
+        btnCompras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirCompras();
+            }
+        });
+        btnReportes=(Button)findViewById(R.id.btnReportes);
+        btnReportes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirReportes();
+            }
+        });
+
+    }
+
+    private void abrirReportes() {
+        Intent ireport=new Intent(this,PDF_activity.class);
+        startActivity(ireport);
+    }
+
+    private void abrirCompras() {
+        Intent icompras= new Intent(this ,Compras_activity.class);
+        startActivity(icompras);
     }
 
     public void abrirClientes() {

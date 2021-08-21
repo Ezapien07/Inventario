@@ -91,7 +91,7 @@
             android:id="@+id/btnReportes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Resportes"
+            android:text="Reportes"
             android:textAlignment="center"
             android:textSize="34sp"
             app:backgroundTint="@android:color/holo_green_dark" />

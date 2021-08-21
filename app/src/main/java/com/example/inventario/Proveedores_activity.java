@@ -32,13 +32,13 @@ public class Proveedores_activity extends AppCompatActivity {
         edtRFCProveedor=(EditText)findViewById(R.id.edtRFCProveedor);
         edtTelefonoProveedor=(EditText)findViewById(R.id.edtTelefonoProveedor);
         edtEmailProveedor=(EditText)findViewById(R.id.edtEmailProveedor);
-        edtSaldoProveedor=(EditText)findViewById(R.id.edtSaldoProveedor);
+        edtSaldoProveedor=(EditText)findViewById(R.id.edtTelefonoCliente);
 
-        btnAgregarProveedor=(Button)findViewById(R.id.btnAgregarProveedor);
-        btnModificarProveedor=(Button)findViewById(R.id.btnModificarProveedor);
-        btnBuscarProveedor=(Button)findViewById(R.id.btnBuscarProveedor);
-        btnBajaProveedor=(Button)findViewById(R.id.btnBajaProveedor);
-        btnConsultaProveedor=(Button)findViewById(R.id.btnConsultaProveedor);
+        btnAgregarProveedor=(Button)findViewById(R.id.btnAgregarCompra);
+        btnModificarProveedor=(Button)findViewById(R.id.btnModificarCompra);
+        btnBuscarProveedor=(Button)findViewById(R.id.btnBuscarCompra);
+        btnBajaProveedor=(Button)findViewById(R.id.btnBajaCompra);
+        btnConsultaProveedor=(Button)findViewById(R.id.btnReporteCompra);
 
 
         db=openOrCreateDatabase("Inventario", Context.MODE_PRIVATE, null);

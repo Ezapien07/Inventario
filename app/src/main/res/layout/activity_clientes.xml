@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtNoVendedores"
+        android:id="@+id/edtClaveCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewNo" />
 
     <EditText
-        android:id="@+id/edtNombreVendedores"
+        android:id="@+id/edtNombreCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -66,7 +66,7 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtNombreVendedores"
-        app:layout_constraintTop_toBottomOf="@+id/edtNoVendedores" />
+        app:layout_constraintTop_toBottomOf="@+id/edtClaveCliente" />
 
     <TextView
         android:id="@+id/txtCalleVendedor"
@@ -81,7 +81,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNombreVendedores" />
 
     <EditText
-        android:id="@+id/edtCalleVendedor"
+        android:id="@+id/edtCalleCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -90,7 +90,7 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtCalleVendedor"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombreVendedores" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreCliente" />
 
     <TextView
         android:id="@+id/txtColoniaVendedor"
@@ -105,7 +105,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtCalleVendedor" />
 
     <EditText
-        android:id="@+id/edtColoniaVendedores"
+        android:id="@+id/edtColoniaCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -114,7 +114,7 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtColoniaVendedor"
-        app:layout_constraintTop_toBottomOf="@+id/edtCalleVendedor" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCalleCliente" />
 
     <TextView
         android:id="@+id/txtTelefonoVendedor"
@@ -129,7 +129,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtColoniaVendedor" />
 
     <EditText
-        android:id="@+id/edtTelefonoVendedor"
+        android:id="@+id/edtCiudadCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -138,7 +138,7 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtTelefonoVendedor"
-        app:layout_constraintTop_toBottomOf="@+id/edtColoniaVendedores" />
+        app:layout_constraintTop_toBottomOf="@+id/edtColoniaCliente" />
 
     <TextView
         android:id="@+id/txtEmailVendedor"
@@ -153,7 +153,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTelefonoVendedor" />
 
     <EditText
-        android:id="@+id/edtEmailVendedor"
+        android:id="@+id/edtRFCCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -162,7 +162,7 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtEmailVendedor"
-        app:layout_constraintTop_toBottomOf="@+id/edtTelefonoVendedor" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCiudadCliente" />
 
     <TextView
         android:id="@+id/txtSaldoProveedor"
@@ -201,7 +201,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTelefono2" />
 
     <EditText
-        android:id="@+id/edtSaldoProveedor"
+        android:id="@+id/edtTelefonoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -210,10 +210,10 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtSaldoProveedor"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailVendedor" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRFCCliente" />
 
     <EditText
-        android:id="@+id/edtEmailClientes"
+        android:id="@+id/edtEmailCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -222,10 +222,10 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtTelefono2"
-        app:layout_constraintTop_toBottomOf="@+id/edtSaldoProveedor" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTelefonoCliente" />
 
     <EditText
-        android:id="@+id/edtSaldoClientes"
+        android:id="@+id/edtSaldoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -234,7 +234,7 @@
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintStart_toEndOf="@+id/txtTelefono3"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailClientes" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailCliente" />
 
     <Button
         android:id="@+id/btnAgregar"

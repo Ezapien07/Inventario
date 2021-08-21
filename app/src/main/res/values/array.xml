@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Array con los valores de la cabecera de la tabla-->
+    <string-array name="cabecera_tabla">
+        <item>Clave</item>
+        <item>Descripcion</item>
+        <item>Unidad</item>
+        <item>Linea</item>
+        <item>Cantidad</item>
+        <item>P Costo</item>
+        <item>Importe</item>
+        <item>Eliminar</item>
+    </string-array>
+</resources>

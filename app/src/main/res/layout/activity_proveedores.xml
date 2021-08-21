@@ -200,14 +200,14 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTelefonoProveedor" />
 
     <EditText
-        android:id="@+id/edtSaldoProveedor"
+        android:id="@+id/edtTelefonoCliente"
         android:layout_width="240dp"
         android:layout_height="74dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnConsultaProveedor" />
+        app:layout_constraintTop_toBottomOf="@+id/btnReporteCompra" />
 
     <TextView
         android:id="@+id/txtSaldoProveedor"
@@ -216,10 +216,10 @@
         android:text="Saldo :"
         android:textAlignment="textEnd"
         android:textSize="40sp"
-        app:layout_constraintEnd_toStartOf="@+id/edtSaldoProveedor"
+        app:layout_constraintEnd_toStartOf="@+id/edtTelefonoCliente"
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toEndOf="@+id/edtTelefonoProveedor"
-        app:layout_constraintTop_toBottomOf="@+id/btnConsultaProveedor" />
+        app:layout_constraintTop_toBottomOf="@+id/btnReporteCompra" />
 
     <TextView
         android:id="@+id/txtTelefonoProveedor"
@@ -234,7 +234,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtRFCProveedor" />
 
     <Button
-        android:id="@+id/btnAgregarProveedor"
+        android:id="@+id/btnAgregarCompra"
         android:layout_width="286dp"
         android:layout_height="69dp"
         android:layout_marginTop="56dp"
@@ -246,7 +246,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnModificarProveedor"
+        android:id="@+id/btnModificarCompra"
         android:layout_width="289dp"
         android:layout_height="72dp"
         android:layout_marginTop="24dp"
@@ -255,10 +255,10 @@
         android:textSize="38sp"
         app:backgroundTint="@android:color/holo_blue_bright"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAgregarProveedor" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarCompra" />
 
     <Button
-        android:id="@+id/btnBuscarProveedor"
+        android:id="@+id/btnBuscarCompra"
         android:layout_width="282dp"
         android:layout_height="73dp"
         android:layout_marginTop="24dp"
@@ -267,10 +267,10 @@
         android:textSize="38sp"
         app:backgroundTint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnModificarProveedor" />
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarCompra" />
 
     <Button
-        android:id="@+id/btnBajaProveedor"
+        android:id="@+id/btnBajaCompra"
         android:layout_width="289dp"
         android:layout_height="74dp"
         android:layout_marginTop="24dp"
@@ -279,10 +279,10 @@
         android:textSize="38sp"
         app:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBuscarProveedor" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscarCompra" />
 
     <Button
-        android:id="@+id/btnConsultaProveedor"
+        android:id="@+id/btnReporteCompra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -291,7 +291,7 @@
         android:textSize="38sp"
         app:backgroundTint="@android:color/holo_purple"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBajaProveedor" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBajaCompra" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
